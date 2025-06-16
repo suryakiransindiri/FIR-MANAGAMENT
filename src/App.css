@@ -1,0 +1,216 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Paytm-inspired blue palette and modern UI */
+:root {
+  --paytm-blue: #0f4c81;
+  --paytm-blue-light: #1877f2;
+  --paytm-bg: linear-gradient(135deg, #e3f0ff 0%, #f5f7fa 100%);
+  --paytm-card-bg: #fff;
+  --paytm-border: #e3e8ee;
+  --paytm-radius: 18px;
+  --paytm-shadow: 0 4px 24px 0 rgba(15,76,129,0.10);
+}
+
+body {
+  background: var(--paytm-bg);
+  color: #222;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+.paytm-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: var(--paytm-blue);
+  padding: 1rem 2rem;
+  border-radius: var(--paytm-radius);
+  margin: 2rem auto 1rem auto;
+  max-width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow-x: auto;
+  align-items: center;
+  box-shadow: var(--paytm-shadow);
+}
+
+.paytm-nav-link {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--paytm-radius);
+  transition: background 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+}
+.paytm-nav-link:hover, .paytm-nav-link.active {
+  background: var(--paytm-blue-light);
+  box-shadow: 0 2px 8px #1877f233;
+}
+
+.paytm-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.paytm-card {
+  background: var(--paytm-card-bg);
+  border-radius: var(--paytm-radius);
+  box-shadow: var(--paytm-shadow);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--paytm-border);
+  transition: box-shadow 0.2s;
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.paytm-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(15,76,129,0.13);
+}
+
+.paytm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.paytm-input, .paytm-form select, .paytm-form textarea {
+  padding: 0.7rem 1rem;
+  border-radius: var(--paytm-radius);
+  border: 1px solid var(--paytm-border);
+  font-size: 1rem;
+  background: #f8fafc;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.2rem;
+}
+.paytm-input:focus, .paytm-form select:focus, .paytm-form textarea:focus {
+  border: 1.5px solid var(--paytm-blue-light);
+  box-shadow: 0 0 0 2px #1877f222;
+}
+
+.paytm-btn {
+  background: linear-gradient(90deg, #1877f2 60%, #0f4c81 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--paytm-radius);
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #1877f211;
+  margin-top: 0.2rem;
+}
+
+.paytm-admin-list {
+  margin-top: 1.5rem;
+}
+
+.paytm-admin-list > div {
+  margin-bottom: 1.2rem !important;
+  padding: 1rem 1rem !important;
+  border-radius: 12px !important;
+  background: #fafdff !important;
+  box-shadow: 0 2px 8px #1877f211 !important;
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paytm-admin-list input, .paytm-admin-list select, .paytm-admin-list textarea {
+  margin-bottom: 0.3rem;
+  margin-top: 0.1rem;
+  font-size: 1rem;
+}
+
+.paytm-admin-list label {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .paytm-navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    max-width: 100vw;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .paytm-card, .paytm-admin-list > div {
+    padding: 0.7rem !important;
+    max-width: 99vw;
+  }
+  .paytm-form {
+    max-width: 99vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .paytm-navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .paytm-container {
+    padding: 1rem 0.2rem;
+  }
+  .paytm-card {
+    padding: 1rem;
+  }
+}
